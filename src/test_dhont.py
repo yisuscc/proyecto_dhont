@@ -14,7 +14,7 @@ from dhondt import *
 ruta_votos_and_2015 = ('../data/and-2015-votos.csv')
 ruta_escanos_and_2015 = ('../data/and-2015-escaдos.csv')
 ruta_votos_and_2018 = ('../data/and-2018-votos.csv')
-ruta_escanos_and_2018 = ('../and-2018-escaдos.csv')
+ruta_escanos_and_2018 = ('../data/and-2018-escaдos.csv')
 ruta_escanos_cat_2017 = ('../data/cat-2017-escaдos.csv')
 ruta_votos_cat_2017 = ('../data/cat-2017-votos.csv')
 ruta_votos_gen_2015 = ('../data/generales-2015-votos.csv')
@@ -30,3 +30,6 @@ lista_votos_gen_2015, dicc_escanos_gen_2015 = lee_escrutinio(ruta_votos_gen_2015
 lista_votos_gen_2016, dicc_escanos_gen_2016 = lee_escrutinio(ruta_votos_gen_2016,ruta_escanos_gen_2016)
 
 # tests 
+def test_calcula_provincias(lista_votos_gen_2016):
+    print("Este es el conjunto de provincias que participaron en las elleciones generales de 2016",calcula_provincias(lista_votos_gen_2016))
+    

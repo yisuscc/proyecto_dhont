@@ -8,6 +8,7 @@ import csv
 
 
 Votos = namedtuple('Votos', 'provincia,partido,votos')
+votos = Votos # para que salte el autocompletar
 
 def lee_escrutinio (ruta_votos,ruta_escanos):
     dicc_escanos = dict()
@@ -24,7 +25,8 @@ def lee_escrutinio (ruta_votos,ruta_escanos):
         
 
 def calcula_provincias(lista_votos):
-    pass
+    res = {votos.provincia for votos in lista_votos}
+    return res 
 
 def calcula_partidos(lista_votos):
     pass
